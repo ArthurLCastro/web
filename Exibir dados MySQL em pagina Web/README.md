@@ -82,6 +82,8 @@ Para adicionar os dados de uma pessoa na tabela, deve-se executar o seguinte com
 
 Como teste, caso você não queira digitar o comando acima, deixei o script [dados.sql](https://github.com/ArthurLCastro/web/blob/master/Exibir%20dados%20MySQL%20em%20pagina%20Web/html/conn/dados.sql) que possui 3 linhas de dados para teste.
 
+<img src="https://github.com/ArthurLCastro/web/blob/master/Exibir%20dados%20MySQL%20em%20pagina%20Web/Imagens/MySQL.png" width="70%">
+
 ### Passo 2: Cópia dos códigos para o servidor Apache
 
 Tendo o LAMP instalado, devem ser copiados para o servidor Apache (no caso do uso de Linux o diretório é /var/www/html) todos os arquivos que estão em [html](https://github.com/ArthurLCastro/web/tree/master/Exibir%20dados%20MySQL%20em%20pagina%20Web/html):
@@ -109,15 +111,7 @@ Caso tenha sido exibido apenas "Página de Testes" no navegador, a conexão foi 
 Se tudo foi feito corretamente, aparecerão os dados da tabela **pessoas** no navegador ao acessar:
 
 	localhost/index.php
-
-## Prints:
-
-### Banco MySQL
-
-<img src="https://github.com/ArthurLCastro/web/blob/master/Exibir%20dados%20MySQL%20em%20pagina%20Web/Imagens/MySQL.png" width="70%">
-
-### Dados sendo exibidos na Página Web
-
+	
 <img src="https://github.com/ArthurLCastro/web/blob/master/Exibir%20dados%20MySQL%20em%20pagina%20Web/Imagens/index.png" width="70%">
 
 ## Referências:
