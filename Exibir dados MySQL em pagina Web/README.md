@@ -26,7 +26,7 @@ Para a criação deste tutorial foi utilizado o seguinte login para o MySQL:
 
 **Senha:** root
 
-A primeira etapa é modificar o código [conexao.php](https://github.com/ArthurLCastro/web/blob/master/Exibir%20dados%20MySQL%20em%20pagina%20PHP/conn/conexao.php), colocando o seu usuário e senha para o MySQL.
+A primeira etapa é modificar o código [conexao.php](https://github.com/ArthurLCastro/web/blob/master/Exibir%20dados%20MySQL%20em%20pagina%20Web/html/conn/conexao.php), colocando o seu usuário e senha para o MySQL.
 
 * **Criação da Base de Dados:**
 
@@ -62,7 +62,7 @@ Desta maneira, estamos utilizando a base de dados **Monitoramento** e começarem
 
 * **Criação da Tabela:**
 
-Para a criação da tabela pode-se digitar o comando diretamente no terminal ou executar o script [tabela.sql](https://github.com/ArthurLCastro/web/blob/master/Exibir%20dados%20MySQL%20em%20pagina%20PHP/conn/tabela.sql)
+Para a criação da tabela pode-se digitar o comando diretamente no terminal ou executar o script [tabela.sql](https://github.com/ArthurLCastro/web/blob/master/Exibir%20dados%20MySQL%20em%20pagina%20Web/html/conn/tabela.sql)
 
 	mysql> SOURCE /local-em-que-o-script-esta-salvo/tabela.sql;
 
@@ -80,11 +80,14 @@ Para adicionar os dados de uma pessoa na tabela, deve-se executar o seguinte com
 
 	mysql> INSERT INTO pessoas (id, nome, email, data_de_cadastro) VALUES (DEFAULT, 'Arthur Castro', 'arthur@dominio.com', DEFAULT);
 
-Como teste, caso você não queira digitar o comando acima, deixei o script [dados.sql](https://github.com/ArthurLCastro/web/blob/master/Exibir%20dados%20MySQL%20em%20pagina%20PHP/conn/dados.sql) que possui 3 linhas de dados para teste.
+Como teste, caso você não queira digitar o comando acima, deixei o script [dados.sql](https://github.com/ArthurLCastro/web/blob/master/Exibir%20dados%20MySQL%20em%20pagina%20Web/html/conn/dados.sql) que possui 3 linhas de dados para teste.
 
 ### Passo 2: Cópia dos códigos para o servidor Apache
 
-Tendo o LAMP instalado, devem ser copiados os arquivos [index.php](https://github.com/ArthurLCastro/web/blob/master/Exibir%20dados%20MySQL%20em%20pagina%20PHP/index.php),[teste-conexao.php](https://github.com/ArthurLCastro/web/blob/master/Exibir%20dados%20MySQL%20em%20pagina%20PHP/teste-conexao.php) e a pasta [conn](https://github.com/ArthurLCastro/web/tree/master/Exibir%20dados%20MySQL%20em%20pagina%20PHP/conn) para o servidor apache (no caso do uso de Linux o diretório é /var/www/html).
+Tendo o LAMP instalado, devem ser copiados para o servidor Apache (no caso do uso de Linux o diretório é /var/www/html) todos os arquivos que estão em [html](https://github.com/ArthurLCastro/web/tree/master/Exibir%20dados%20MySQL%20em%20pagina%20Web/html):
+* [index.php](https://github.com/ArthurLCastro/web/blob/master/Exibir%20dados%20MySQL%20em%20pagina%20Web/html/index.php)
+* [teste-conexao.php](https://github.com/ArthurLCastro/web/blob/master/Exibir%20dados%20MySQL%20em%20pagina%20Web/html/teste-conexao.php)
+* A pasta [conn](https://github.com/ArthurLCastro/web/tree/master/Exibir%20dados%20MySQL%20em%20pagina%20Web/html/conn) com seu conteúdo
 
 ### Passo 3: Testes de Funcionamento
 
@@ -97,7 +100,9 @@ Antes do teste de vizualização dos dados do banco na página, devemos testar a
 
 	192.168.0.170/teste-conexao.php
 
-Caso tenha sido exibido apenas "Página de Testes" no navegador, a conexão foi bem sucedida e podemos prosseguir. Caso algum erro tenha aparecido em seu navegador, você deve procurar corrigir no código [conexao.php](https://github.com/ArthurLCastro/web/blob/master/Exibir%20dados%20MySQL%20em%20pagina%20PHP/conn/conexao.php) que provavelmente não está com o seu usuário e senha do MySQL corretos.
+Caso tenha sido exibido apenas "Página de Testes" no navegador, a conexão foi bem sucedida e podemos prosseguir. Caso algum erro tenha aparecido em seu navegador, você deve procurar corrigir no código [conexao.php](https://github.com/ArthurLCastro/web/blob/master/Exibir%20dados%20MySQL%20em%20pagina%20Web/html/conn/conexao.php) que provavelmente não está com o seu usuário e senha do MySQL corretos.
+
+<img src="https://github.com/ArthurLCastro/web/blob/master/Exibir%20dados%20MySQL%20em%20pagina%20Web/Imagens/Teste-Conexao.png" width="70%">
 
 * **Exibição dos dados na Página Web:**
 
@@ -109,11 +114,11 @@ Se tudo foi feito corretamente, aparecerão os dados da tabela **pessoas** no na
 
 ### Banco MySQL
 
-<img src="https://github.com/ArthurLCastro/projetos-arduino/blob/master/Alimentar%20MySQL%20com%20Serial%20-%20Python/Arduino-e-LDR.jpg" width="70%">
+<img src="https://github.com/ArthurLCastro/web/blob/master/Exibir%20dados%20MySQL%20em%20pagina%20Web/Imagens/MySQL.png" width="70%">
 
 ### Dados sendo exibidos na Página Web
 
-<img src="https://github.com/ArthurLCastro/projetos-arduino/blob/master/Alimentar%20MySQL%20com%20Serial%20-%20Python/Arduino-LDR-e-DHT22.jpg" width="70%">
+<img src="https://github.com/ArthurLCastro/web/blob/master/Exibir%20dados%20MySQL%20em%20pagina%20Web/Imagens/index.png" width="70%">
 
 ## Referências:
 [Exibir dados ou registros do banco de dados MySQL com PHP - Zero Bugs](https://www.youtube.com/watch?v=TuvO79zyzew)
