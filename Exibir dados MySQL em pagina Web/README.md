@@ -114,5 +114,15 @@ Se tudo foi feito corretamente, aparecerão os dados da tabela **pessoas** no na
 	
 <img src="https://github.com/ArthurLCastro/web/blob/master/Exibir%20dados%20MySQL%20em%20pagina%20Web/Imagens/index.png" width="70%">
 
+**Obs.:** Na linha 12 do código [index.php](https://github.com/ArthurLCastro/web/blob/master/Exibir%20dados%20MySQL%20em%20pagina%20Web/html/index.php)
+
+	12.	<meta charset="utf-8" http-equiv="refresh" content="5">
+
+existe uma atualização da página automaticamente a cada 5 segundo com o uso de
+
+	http-equiv="refresh" content="5"
+
+Pode-se alterar este tempo de atualização modificando *content=5* para outros valores.
+
 ## Referências:
 [Exibir dados ou registros do banco de dados MySQL com PHP - Zero Bugs](https://www.youtube.com/watch?v=TuvO79zyzew)
